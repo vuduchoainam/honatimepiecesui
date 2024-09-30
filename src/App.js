@@ -1,17 +1,14 @@
-import { Container, Row } from "react-bootstrap";
 import "./App.scss";
 import Header from "./components/Header";
-import TableUsers from "./components/TableUser";
+import TableCategory from "./components/TableCategory";
 
 function App() {
 	return (
-		<div className="app-container">
-			<Container>
-				<Row>
-					<Header />
-					<TableUsers />
-				</Row>
-			</Container>
+		<div className="min-h-screen bg-gray-100">
+			<Header />
+			<div className="container p-4 mx-auto">
+				<TableCategory />
+			</div>
 		</div>
 	);
 }
