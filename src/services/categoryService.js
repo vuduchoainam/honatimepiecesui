@@ -1,10 +1,7 @@
-import axios from "axios";
+import axios from "./customize-axios";
 
-const fetchAllCategory = (pageSize, pageNumber) => {
-	return axios.post(`https://localhost:7097/Category/SearchCategory`, {
-		pageSize: pageSize,
-		pageNumber: pageNumber,
-	});
+const fetchAllCategory = (page) => {
+	return axios.post(`/Category/SearchCategory?pageNumber=${page}`);
 };
 
 export { fetchAllCategory };
