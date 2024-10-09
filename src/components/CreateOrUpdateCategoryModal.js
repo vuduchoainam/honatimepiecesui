@@ -9,11 +9,10 @@ const CreateOrUpdateCategoryModal = ({ showModal, toggleModal, modalType, catego
 	// Cập nhật dữ liệu khi modalType là edit
 	useEffect(() => {
 		if (modalType === "edit" && categoryData) {
-			console.log(">>check data: ", categoryData);
 			setName(categoryData.name);
 			setDescription(categoryData.description);
 		} else {
-			// Reset dữ liệu khi là create
+			// modalType = 'create'
 			setName("");
 			setDescription("");
 		}
